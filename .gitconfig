@@ -1,2 +1,7 @@
 [init]
 	defaultBranch = master
+[user]
+	email = hampus.fridholm@gmail.com
+	name = Hampus Fridholm
+[core]
+	editor = vim
