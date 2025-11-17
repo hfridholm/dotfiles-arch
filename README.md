@@ -1,8 +1,13 @@
 # Arch Linux Dotfiles
 
+## Update system
+```bash
+sudo pacman -Syu
+```
+
 ## Install packages
 ```bash
-sudo pacman -S man vi git fastfetch imv tmux ripgrep neovim
+sudo pacman -S man vi git fastfetch cava imv tmux ripgrep neovim
 ```
 
 ## Install dotfiles
