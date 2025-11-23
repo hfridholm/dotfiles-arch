@@ -1,0 +1,54 @@
+* {
+  font-family: "HackNerdFont Mono", archcraft, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#window {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#input {
+  padding: 8px 12px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#scroll {
+  margin-top: 20px;
+}
+
+#inner-box {
+}
+
+#img {
+  padding-right: 8px;
+}
+
+#text {
+  color: white;
+}
+
+#text:selected {
+  color: black;
+}
+
+#entry {
+  padding: 6px;
+}
+
+#entry:selected {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#unselected {
+}
+
+#selected {
+}

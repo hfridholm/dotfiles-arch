@@ -1,55 +1,52 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Hack Nerd Font";
+  font-family: "Hack Nerd Font", sans-serif;
   font-size: 16px;
+  font-weight: bold;
   min-height: 0;
 }
 
 window#waybar {
   background: transparent;
   color: white;
+  transition-property: background-color;
+  transition-duration: 0.2s;
 }
 
+/*
 #window {
   font-weight: bold;
-  font-family: "Hack Nerd Font";
+  font-family: "Hack Nerd Font", sans-serif;
 }
+*/
 
 #workspaces button {
-  padding: 0 5px;
-  background: transparent;
+  padding: 5px 8px;
+  margin: 0 4px;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  border-top: 2px solid transparent;
+  border-radius: 10px;
 }
 
-#workspaces button.focused {
-  color: #c9545d;
-  border-top: 2px solid #c9545d;
+#workspaces button.empty {
+  color: gray;
 }
 
-#mode {
-  background: #64727D;
-  border-bottom: 3px solid white;
+#workspaces button.active {
+  background-color: white;
+  color: black;
 }
 
-#clock, #battery, #network, #pulseaudio, #tray, #mode {
-  padding: 0 3px;
-  margin: 0 2px;
-}
-
-#clock {
-  font-weight: bold;
-}
-
-#battery {
-}
-
-#battery icon {
-  color: red;
+#clock, #battery, #network, #backlight, #pulseaudio, #custom-power {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 8px;
+  border-radius: 10px;
+  color: white;
 }
 
 #battery.charging {
+  color: lightgreen;
 }
 
 @keyframes blink {
@@ -68,18 +65,20 @@ window#waybar {
   animation-direction: alternate;
 }
 
-#network {
-}
-
 #network.disconnected {
-  background: #f53c3c;
-}
-
-#pulseaudio {
+  color: red;
 }
 
 #pulseaudio.muted {
+  color: red;
 }
 
-#tray {
+menu {
+	border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+menuitem {
+	border-radius: 15px;
+  color: white;
 }
