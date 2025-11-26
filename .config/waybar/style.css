@@ -38,7 +38,7 @@ window#waybar {
   color: black;
 }
 
-#clock, #battery, #network, #backlight, #pulseaudio, #custom-power {
+#clock, #battery, #temperature, #network, #backlight, #pulseaudio, #custom-power {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 8px;
   border-radius: 10px;
