@@ -7,7 +7,39 @@ sudo pacman -Syu
 
 ## Install packages
 ```bash
-sudo pacman -S man vi git fastfetch cava imv tmux ripgrep neovim
+sudo pacman -S man git tmux ripgrep neovim tree unzip wget
+```
+
+### Hyprland
+```bash
+sudo pacman -S waybar hyprpaper
+```
+
+### Utilities
+```bash
+sudo pacman -S pavucontrol brightnessctl nwg-bar nwg-look
+```
+
+### Applications
+```bash
+sudo pacman -S fastfetch cava imv firefox htop
+```
+
+### Nerd Font
+[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+```bash
+sudo pacman -S ttf-hack-nerd
+```
+
+### GTK
+```bash
+git clone https://aur.archlinux.org/catppuccin-gtk-theme-mocha.git
+```
+
+### SDDM
+[Catppuccin Theme](https://github.com/catppuccin/sddm)
+```bash
+sudo pacman -Syu qt6-svg qt6-declarative qt5-quickcontrols2
 ```
 
 ## Install dotfiles
