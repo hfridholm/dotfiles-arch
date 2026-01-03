@@ -25,6 +25,11 @@ sudo pacman -S pavucontrol brightnessctl nwg-bar nwg-look
 sudo pacman -S fastfetch cava imv firefox htop
 ```
 
+### Programming
+```bash
+sudo pacman -S rustup
+```
+
 ### Nerd Font
 [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 ```bash
