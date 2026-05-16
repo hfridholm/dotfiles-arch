@@ -1,5 +1,3 @@
--- Last updated: 2026-05-16
-
 -- This is an example Hyprland Lua config file.
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
@@ -30,8 +28,8 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local menu        = "hyprlauncher"
+local terminal = "kitty"
+local menu     = "wofi --show drun"
 
 
 -------------------
@@ -259,22 +257,23 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
--- hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit"))    -- dwindle only
+
+hl.bind(mainMod .. " + Q",     hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + M",     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + V",     hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + P",     hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + T",     hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Fullscreen
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(mainMod .. " + F",         hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
 -- Applications
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("spotify-launcher"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
+hl.bind(mainMod .. " + N",         hl.dsp.exec_cmd("spotify-launcher"))
+hl.bind(mainMod .. " + B",         hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("firefox --private-window"))
 
 -- Scripts
@@ -377,3 +376,6 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'catppuccin-mocha-red-standard+default'")
+hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
