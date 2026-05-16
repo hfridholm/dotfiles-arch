@@ -23,4 +23,6 @@ alias vim="nvim"
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
+alias movinfo="ffprobe -v error -select_streams v:0 -show_entries format=duration:format_tags=creation_time:stream=width,height,avg_frame_rate -of default=noprint_wrappers=1"
+
 export MANPAGER="nvim +Man!"
